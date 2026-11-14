@@ -83,11 +83,37 @@ rm -f ~/.clap/easymodebtw.clap
 
 Releases contain the CLAP plugin only.
 
+## FAQ
+
+### Is it free?
+
+Yes. The download is free and MIT-licensed.
+
+### Is there a VST3 or LV2 version?
+
+No. Releases contain the CLAP plugin only.
+
+### Does it run on ARM, like a Raspberry Pi or Apple Silicon?
+
+No. It needs Linux on x86-64, on a CPU with AVX2.
+
+### Which hosts does it work in?
+
+A CLAP host that takes a note effect in front of an instrument. It was tried in REAPER.
+
+### Does it work on Wayland?
+
+Through XWayland. The editor also needs a Vulkan driver.
+
+### Does it make sound?
+
+No. It only rewrites MIDI notes and has no audio inputs or outputs. Put it in front of an instrument.
+
 ## License
 
 MIT, see [LICENSE](LICENSE). The licenses of the third-party code in the binaries are in
 `THIRD-PARTY-LICENSES.txt` in each release archive.
 
-CLAP is an open standard by the free-audio project. Smart Play is a product feature of Native
-Instruments. EasyModeBtw is an independent project, not affiliated with or endorsed by Native
-Instruments.
+VST is a registered trademark of Steinberg Media Technologies GmbH. CLAP is an open standard by the
+free-audio project. Smart Play is a product feature of Native Instruments. EasyModeBtw is an
+independent project, not affiliated with or endorsed by Native Instruments.
