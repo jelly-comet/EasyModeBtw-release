@@ -7,6 +7,8 @@ CLAP for Linux.
 
 ![EasyModeBtw's PLAY page in F minor: a white key fanning out into a chord, the chords before it rising above](images/screenshot.png)
 
+**[EasyModeBtw on jelly-comet.github.io](https://jelly-comet.github.io/plugins/easymodebtw/)**: more screenshots, the manual to read or as a PDF, and every release.
+
 Pick F minor, and the white keys from C3 upwards play F G Ab Bb C Db Eb F. Put EasyModeBtw in
 front of any instrument and you can't play a wrong note. Turn on CHORDS and every white key plays
 the scale's chord on its note; turn on the strum or the ARP and those chords come out one note at
@@ -16,6 +18,13 @@ Instruments' Smart Play. It has no audio inputs or outputs: it only rewrites MID
 It runs natively on Linux, with no network access and no telemetry.
 
 **[Read the manual](manual.md)** for every control and how to use it.
+
+## What it's for
+
+- **Playing in key without music theory:** every white key is a note of the scale you picked, so no key is a wrong note. It does what a scale lock does, for any instrument.
+- **One-finger chords:** a chord generator that puts a chord of the scale on every key, for sketching chord progressions. The key map suggests three chords to play next.
+- **Strummed parts:** press a key and its chord is strummed like a guitar.
+- **Arpeggios in time:** an arpeggiator on the host's beat, from a plain up and down to a rhythm of up to 32 steps.
 
 ## Features
 
@@ -60,20 +69,16 @@ sudo rm -f /usr/lib/clap/easymodebtw.clap && sudo cp easymodebtw.clap /usr/lib/c
 Removing the old copy first avoids overwriting a file a running host has loaded. Then rescan plugins
 in your DAW.
 
-Since 1.0.0 releases have no VST3. A VST3 from an earlier release keeps working but no longer
-updates; a project that used it takes the CLAP in its place. To remove the old copy:
-`rm -rf ~/.vst3/easymodebtw.vst3`, or `sudo rm -rf /usr/lib/vst3/easymodebtw.vst3`.
-
 To uninstall:
 
 ```bash
-rm -rf ~/.clap/easymodebtw.clap ~/.vst3/easymodebtw.vst3
+rm -f ~/.clap/easymodebtw.clap
 ```
 
 ## Requirements
 
 - Linux x86-64 on a CPU with AVX2 (Intel Core from 2013, AMD from 2015), with glibc 2.31 or newer (Ubuntu 20.04, Debian 11, Fedora 32 and newer)
-- A CLAP host
+- A CLAP host that takes a note effect in front of an instrument. Tried in REAPER.
 - X11 or XWayland, and a Vulkan driver for the editor
 
 Releases contain the CLAP plugin only.
@@ -83,6 +88,6 @@ Releases contain the CLAP plugin only.
 MIT, see [LICENSE](LICENSE). The licenses of the third-party code in the binaries are in
 `THIRD-PARTY-LICENSES.txt` in each release archive.
 
-VST is a registered trademark of Steinberg Media Technologies GmbH. CLAP is an open standard
-by the free-audio project. Smart Play is a product feature of Native Instruments. EasyModeBtw is
-an independent project, not affiliated with or endorsed by Steinberg or Native Instruments.
+CLAP is an open standard by the free-audio project. Smart Play is a product feature of Native
+Instruments. EasyModeBtw is an independent project, not affiliated with or endorsed by Native
+Instruments.
